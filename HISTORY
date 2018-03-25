@@ -1,0 +1,10 @@
+ksm and ksmtuned control scripts originally written by
+Dan Kenigsberg, see the threads here:
+
+* https://www.redhat.com/archives/fedora-virt/2009-September/msg00023.html
+* https://www.redhat.com/archives/fedora-virt/2009-September/msg00052.html
+
+ksmctl.c and systemd units added by Paolo Bonzini <pbonzini@redhat.com>
+
+There was never really a canonical location these files were stored at.
+They were originally added to: https://src.fedoraproject.org/rpms/qemu
