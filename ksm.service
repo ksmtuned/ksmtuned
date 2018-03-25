@@ -1,0 +1,14 @@
+[Unit]
+Description=Kernel Samepage Merging
+ConditionPathExists=/sys/kernel/mm/ksm
+ConditionVirtualization=no
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+EnvironmentFile=-/etc/sysconfig/ksm
+ExecStart=/usr/libexec/ksmctl start
+ExecStop=/usr/libexec/ksmctl stop
+
+[Install]
+WantedBy=multi-user.target
