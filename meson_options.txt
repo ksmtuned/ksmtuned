@@ -1,0 +1,6 @@
+option(
+  'redhat-sysconfig',
+  type: 'boolean',
+  value: false,
+  description: 'Install redhat /etc/sysconfig files (default=no)',
+)

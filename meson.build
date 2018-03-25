@@ -19,10 +19,12 @@ executable(
     install: true,
 )
 
-install_data(
-    'data/sysconfig/ksm',
-    install_dir: join_paths(conf_data.get('SYSCONFDIR'), 'sysconfig'),
-)
+if get_option('redhat-sysconfig')
+  install_data(
+      'data/sysconfig/ksm',
+      install_dir: join_paths(conf_data.get('SYSCONFDIR'), 'sysconfig'),
+  )
+endif
 
 install_data(
     'data/ksmtuned.conf',
