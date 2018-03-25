@@ -17,8 +17,8 @@
 #
 # needs testing and ironing. contact danken@redhat.com if something breaks.
 
-if [ -f /etc/ksmtuned.conf ]; then
-    . /etc/ksmtuned.conf
+if [ -f @SYSCONFDIR@/ksmtuned.conf ]; then
+    . @SYSCONFDIR@/ksmtuned.conf
 fi
 
 debug() {

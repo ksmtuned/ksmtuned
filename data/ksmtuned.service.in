@@ -5,7 +5,7 @@ Requires=ksm.service
 ConditionVirtualization=no
 
 [Service]
-ExecStart=/usr/sbin/ksmtuned
+ExecStart=@SBINDIR@/ksmtuned
 ExecReload=/bin/kill -USR1 $MAINPID
 Type=forking
 
